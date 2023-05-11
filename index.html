@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="Style.css">
+  </head>
+  <body>
+    <h1 class="title">Rock Paper Scissors</h1>
+    <div class="Container">
+    <button class="move-button js-rock-button">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Ronald_dela_Rosa_073116_%28cropped%29.jpg" alt="Rock" class="move-icon">
+    </button>
+
+    <button class="move-button js-paper-button">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6jNxUJpPVJXS7679TzDO2b4w59sr5jN-4WQ&usqp=CAU" alt="Paper" class="move-icon">
+    </button>
+
+    <button class="move-button js-scissors-button">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT2mpiK0k7YdxwWEalnm5RuFb5gJzbZmaC6Q&usqp=CAU" alt="scissors" class="move-icon">
+    </button>
+    </div>
+    <p class="js-moves"></p>
+    <p class="js-result result"></p>
+    <p class="js-score score"></p>
+    
+    <button onclick="
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScoreElement();
+    " class="reset-score-button js-reset-score-button">Reset Score</button>
+    <script src="javascript.js"></script>
+  </body>
+</html>
